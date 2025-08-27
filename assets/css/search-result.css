@@ -12,12 +12,6 @@
     transform: translateY(0);
 }
 
-#resultsContainer
-{
-    display: ruby;
-}
-
-
 .badge-sale {
     position: absolute;
     top: 12px;
