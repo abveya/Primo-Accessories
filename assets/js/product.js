@@ -117,6 +117,7 @@ window.onload = () => {
                         data-product-id="${product.id}"
                         data-product-name="${product.name}"
                         data-product-price="${finalPrice.toFixed(2)}"
+                        data-product-color="${product.images[0].color || ''}"
                         data-product-image="${product.images[0].src}">
                         ADD TO CART
                     </button>

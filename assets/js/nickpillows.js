@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             data-product-id="${product.id}"
                             data-product-name="${product.name}"
                             data-product-price="${finalPrice.toFixed(2)}"
-                            data-product-color="black"
+                            data-product-color="${product.images[0].color || 'default'}"
                             data-product-image="${product.images[0].src}">
                             Add to cart
                         </button>

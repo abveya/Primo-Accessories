@@ -13,43 +13,47 @@ document.addEventListener("DOMContentLoaded", () => {
             col.className = "col-lg-4 col-md-4 col-sm-6 col-6 d-flex justify-content-center product";
             col.style.display = "none";
 
-            const dataImages = JSON.stringify(product.images).replace(/"/g, "&quot;");
             const finalPrice = product.discount > 0
                 ? product.price - (product.price * product.discount / 100)
                 : product.price;
 
+            // badge
+            const badgeHTML = product.discount > 0 
+                ? `<span class="badge-sale">${product.discount}% OFF</span>` 
+                : "";
+
             col.innerHTML = `
-                <div class="box d-flex flex-column">
-                    <a href="${product.link}?id=${product.id}">
-                        <div class="images" data-images='${dataImages}'>
+    <div class="box d-flex flex-column">
+        <a href="${product.link}?id=${product.id}">
+                        <div class="images" data-images='${JSON.stringify(product.images)}'>
                             <img src="${product.images[0].src}">
+                            ${badgeHTML}
                             <span class="arrow left prevImage"><i class="fa-solid fa-caret-left"></i></span>
                             <span class="arrow right nextImage"><i class="fa-solid fa-caret-right"></i></span>
-                            ${product.discount > 0 ? `<span class="badge-sale">${product.discount}% OFF</span>` : ""}
                         </div>
                     </a>
-                    <div class="key-cover-info">
-                        <p class="key-cover-title">${product.title}</p>
-                        <p>${product.name}</p>
-                    </div>
-                    <div class="key-cover-price d-flex align-items-baseline">
-                        <p class="d-flex flex-column">
-                            ${product.discount > 0
+        <div class="key-cover-info">
+            <p class="key-cover-title">${product.title}</p>
+            <p>${product.name}</p>
+        </div>
+        <div class="key-cover-price d-flex align-items-baseline">
+            <p class="d-flex flex-column">
+                ${product.discount > 0
                     ? `<span class="new-price">LE ${finalPrice}.00</span>
-                                <span class="old-price">LE ${product.price}.00</span>`
+                       <span class="old-price">LE ${product.price}.00</span>`
                     : `LE ${product.price}.00`}
-                        </p>
-                        <button class="btn-sm add-to-cart"
-                        data-product-id="${product.id}"
-                        data-product-name="${product.name}"
-                        data-product-price="${finalPrice}"
-                        data-product-image="${product.images[0].src}"
-                        >
-                            Add to cart
-                        </button>
-                    </div>
-                </div>
-                `;
+            </p>
+            <button class="btn-sm add-to-cart"
+                data-product-id="${product.id}"
+                data-product-name="${product.name}"
+                data-product-price="${finalPrice}"
+                data-product-image="${product.images[0].src}">
+                Add to cart
+            </button>
+        </div>
+    </div>
+`;
+
             resultsContainer.appendChild(col);
             found = true;
         }

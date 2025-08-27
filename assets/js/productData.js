@@ -397,8 +397,7 @@ const products = [
         material: "TPU",
         images: [
             { src: "assets/images/key-covers/Key cover for Mercedes-Benz W204 W463 W176 W251(silver).jpg",color: "silver"},
-            { src: "assets/images/key-covers/Key cover for Mercedes-Benz W204 W463 W176 W251(gold).jpg",color: "gold"},
-            { src: "assets/images/key-covers/Key cover for Mercedes-Benz W204 W463 W176 W251.jpeg" }
+            { src: "assets/images/key-covers/Key cover for Mercedes-Benz W204 W463 W176 W251(gold).jpg",color: "gold"}
         ],
         link: "KC10.html"
     },
@@ -437,8 +436,7 @@ const products = [
         material: "TPU",
         images: [
             { src: "assets/images/key-covers/Key cover for MG MG5 MG6  MG ZS MGRX5(silver).jpg",color: "silver"},
-            { src: "assets/images/key-covers/Key cover for MG MG5 MG6  MG ZS MGRX5(gold).jpg",color: "gold"},
-            { src: "assets/images/key-covers/Key cover for MG MG5 MG6  MG ZS MGRX5.jpeg" }
+            { src: "assets/images/key-covers/Key cover for MG MG5 MG6  MG ZS MGRX5(gold).jpg",color: "gold"}
         ],
         link: "KC13.html"
     },
