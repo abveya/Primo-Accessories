@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             col.innerHTML = `
                 <div class="box d-flex flex-column">
-                    <a href="${product.link}">
+                    <a href="${product.link}?id=${product.id}">
                         <div class="images" data-images='${dataImages}'>
                             <img src="${product.images[0].src}">
                             <span class="arrow left prevImage"><i class="fa-solid fa-caret-left"></i></span>
