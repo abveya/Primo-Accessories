@@ -1,0 +1,28 @@
+.About
+{
+    margin-bottom: 15%;
+}
+
+.About .container .wrapper h1
+{
+    color: #00001a  !important;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 41%);
+    font-weight: 600 !important;
+    padding: 10px 0px 0px 0px;
+}
+
+.About .container .wrapper .about-image img
+{
+    width: 398px;
+    object-fit: cover;
+    height: 324px;
+}
+
+.About .container .wrapper .about-content .text h5
+{
+    font-size: 18px;
+    color: #8c8c8c;
+    margin-top: 24px;
+    line-height: 27px;
+    letter-spacing: 0.2px;
+}

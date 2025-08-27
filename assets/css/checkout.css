@@ -1,0 +1,89 @@
+.checkout {
+    margin-bottom: 10%;
+}
+
+.checkout .wrapper {
+    column-gap: 5%;
+}
+
+.checkout .wrapper .headers .title h1 {
+    color: #00001a !important;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 41%);
+    font-weight: 600 !important;
+}
+
+.checkout .wrapper .headers .go-cart a {
+    text-decoration: none;
+    color: black;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+    font-family: sans-serif;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.checkout .wrapper h3 {
+    font-size: 26px;
+}
+
+.checkout .wrapper .checkout-content form .form-control,
+.checkout .wrapper .checkout-content form select {
+    font-size: 14px !important;
+    border: var(--bs-border-width) solid #efefefad;
+    border-radius: 9px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px #e7e7e7d7;
+    color: #696969;
+    padding: 10px;
+}
+
+.checkout .wrapper .checkout-content form .form-control:focus,
+.checkout .wrapper .checkout-content form select:focus {
+    border: 1px solid black;
+}
+
+.checkout .wrapper .checkout-content form label {
+    font-size: 13px;
+}
+
+.checkout .wrapper .checkout-content form .form-check-input:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.checkout .wrapper .checkout-content form .form-check-lable {
+    font-size: 15px;
+    color: #000016;
+}
+
+.checkout .wrapper .checkout-content form .button button {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    border: 0px;
+    padding: 13px;
+    color: white;
+    background: black;
+    border-radius: 7px;
+}
+
+.checkout-summary h3 {
+    border-bottom: 1px solid #80808057;
+}
+
+.checkout-summary .total {
+    border-top: 1px solid #80808057;
+}
+
+.checkout-summary .checkout-summary-content,
+.checkout-summary .total {
+    font-size: 14px;
+}
+
+.checkout-summary .checkout-summary-content p,
+.checkout-summary .total p {
+    color: #989898;
+}

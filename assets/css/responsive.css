@@ -1,0 +1,21 @@
+/* Small  768px  to 991px
+@media (min-width: 768px) {
+  .container-fluid {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {  
+  .container-fluid {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) { 
+  .container-fluid {
+    width: 1170px;
+    margin: 0 auto;
+  }
+} */

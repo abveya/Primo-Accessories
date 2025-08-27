@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/primo.css" />
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    
+<!-- start of the header -->
+<header class="px-3">
+  <div class="container-fluid px-5" data-aos="fade-down" data-aos-delay="260">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid logo-nav">
+        <!-- logo -->
+        <a class="navbar-brand logo d-flex align-items-center" href="index.html">
+          <img src="assets/images/logo.png" class="rounded-circle me-2" width="109" height="70" alt="Logo">
+          <h4 class="mb-0">Primo Accessories</h4>
+        </a>
+
+        <!-- toggle button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- nav links -->
+        <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-3">
+            <li class="nav-item d-flex align-items-center home">
+              <i class="fa-solid fa-house me-1"></i>
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <!-- dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriesMenu" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+              <ul class="dropdown-menu" aria-labelledby="categoriesMenu">
+                <li><a class="dropdown-item" href="category-one.html">Key Covers</a></li>
+                <li><a class="dropdown-item" href="category-three.html">Nick Pillows</a></li>
+                <li><a class="dropdown-item" href="category-two.html">Accessories</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+          </ul>
+
+          <!-- search + cart -->
+          <div class="d-flex align-items-center">
+            <div class="search-box me-3 position-relative">
+              <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Search"
+                                        aria-label="Search"
+                                        id="searchBox"
+                                    >
+              <i class="fa fa-search position-absolute d-flex align-items-center justify-content-center"></i>
+            </div>
+            <div class="icon-shopping position-relative">
+              <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- end of the header -->
+
+
+<section class="checkout mt-5">
+    <div class="container">
+        <div class="wrapper row justify-content-center">
+            <div class="headers border-1 mb-3 row ">
+                <div class="title col-6">
+                    <h1>Shipping Information</h1>
+                </div>
+                <div class="go-cart col-6 text-end">
+                    <a href="Cart.html"><i class="fa-solid fa-arrow-left pe-1"></i>Back to your cart</a>
+                </div>
+            </div>
+
+            <div class="checkout-content col-6">
+                <form action="">
+                    <!-- Contact Info -->
+                    <div class="contact-info row mb-3">
+                        <h3 class="col-10 mb-4">Contact information</h3>
+                        <div class="col-12 mb-4">
+                            <label for="full-name" class="mb-3 ms-2">Full name *</label>
+                            <input class="form-control" type="text" placeholder="Enter your full name" name="full-name" id="full-name" required>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="Email" class="mb-3 ms-2">Email</label>
+                            <input class="form-control" type="email" placeholder="Enter your email" name="email" id="Email" >
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="phone-number" class="mb-3 ms-2">Phone number *</label>
+                            <input class="form-control" type="tel" placeholder="Enter your phone number" name="phone-number" id="phone-number" required>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="shipping-add row mb-3">
+                        <h3 class="col-10 mb-4">Shipping address</h3>
+                        <div class="col-6 mb-4">
+                            <label for="country" class="mb-3 ms-2">Country *</label>
+                            <select class="form-select" name="country" id="country" required onchange="updateCities()">
+                                <option value="">Select your country</option>
+                                <option value="Egypt">Egypt</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="city" class="mb-3 ms-2">City *</label>
+                            <select class="form-select" name="city" id="city" required onchange="updateRegions()">
+                                <option value="">Select your city</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="region" class="mb-3 ms-2">region *</label>
+                            <input class="form-control" type="text" placeholder="Enter your region" name="region" id="region" required>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <label for="street-address" class="mb-3 ms-2">Street address *</label>
+                            <input class="form-control" type="text" placeholder="Enter your street address" name="street-address" id="street-address" required>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Method -->
+                    <div class="shipping-method row mb-2">
+                        <h3 class="col-19 mb-4">Shipping method</h3>
+                        <div class="col-12">
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="radio" name="shippingMethod" id="onlineDelivery" checked>
+                                <label class="form-check-label" for="onlineDelivery">
+                                    Online Order – Delivery (Pay Cash on Delivery)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Place Order</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="checkout-summary col-4">
+                <h3 class="pb-3" >Summary</h3>
+                <div class="checkout-summary-content row pt-2">
+                    <div class="items d-flex col-12 justify-content-between">
+                        <p>Price</p>
+                        <span id="price">LE 0</span>
+                    </div>
+                    <div class="fees d-flex col-12 justify-content-between">
+                        <P>Shipping fees</P>
+                        <span id="shipping-fee">LE 0</span>
+                    </div>
+                </div>
+                <div class="total d-flex justify-content-between pt-3">
+                    <p>Total cost</p>
+                    <span id="total-cost">LE 0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- start of the footer  -->
+		<footer class="d-flex flex-column">
+			<div class="waves">
+				<div class="wave" id="wave1"></div>
+				<div class="wave" id="wave2"></div>
+				<div class="wave" id="wave3"></div>
+				<div class="wave" id="wave4"></div>
+			</div>
+			<div class="wrapper">
+				<div class="top-footer">
+					<div class="primo-info">
+						<div class="logo d-flex align-items-center gap-3">
+							<img class="logo" src="assets/images/logo-white.png" width="109px" height="70px" />
+							<h4>Primo Accessories</h4>
+						</div>
+						<p>Discover trendy car essentials — from stylish key covers to cozy neck pillows and unique accessories. We bring you products that combine practicality with style to make every drive more enjoyable.</p>
+						<h4>Follow Us</h4>
+						<ul class="d-flex">
+							<li>
+								<a class="d-inline-flex justify-content-center align-items-center text-decoration-none rounded-3" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a class="d-inline-flex justify-content-center align-items-center text-decoration-none rounded-3" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+							</li>
+							<li>
+								<a class="d-inline-flex justify-content-center align-items-center text-decoration-none rounded-3" href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="quick-links">
+						<h3>Quick Links</h3>
+						<a href="About.html">About Us</a>
+						<a href="Contact.html">Contact</a>
+						<a href="index.html">Home</a>
+						<a href="category-one.html">Key Covers</a>
+						<a href="category-three.html">Nick Pillows</a>
+						<a href="category-two.html">Accessories</a>
+					</div>
+
+					<div class="contact-info">
+						<h3>Contact Info</h3>
+						<a href="#"> <i class="fas fa-location-dot"></i>Online Store – Cairo, Egypt</a>
+						<a href="tel:+1(555)123-456"><i class="fas fa-phone"></i>Contact us online</a>
+						<a href="mailto:info@primo.com"><i class="fas fa-envelope"></i>info@primo.com</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end of the footer  -->
+
+        <script src="assets/js/cart.js"></script>
+		<script src="assets/js/primo.js"></script>
+        <script src="assets/js/checkout.js"></script>
+        		<script src="assets/js/search-results.js"></script>
+		<script src="assets/js/search.js"></script>
+        <script src="assets/js/productData.js"></script>
+</body>
+</html>
