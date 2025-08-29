@@ -9,13 +9,14 @@
         <link rel="stylesheet" href="assets/css/primo.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
         <link rel="icon" href="assets/images/logo-white.png">
+        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
     <body>
         <!-- start of the header -->
         <header class="px-3">
             <div class="container-fluid px-5" data-aos="fade-down" data-aos-delay="260">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid logo-nav d-flex">
+                    <div class="container-fluid logo-nav d-flex ">
                         <!-- logo -->
                         <a class="navbar-brand logo d-flex align-items-center" href="index.html">
                             <img
@@ -41,6 +42,9 @@
                         </button>
                         <!-- nav links -->
                         <div class="collapse navbar-collapse nav-links" id="mainNavbar">
+                            <button type="button" class="btn-close exit-menu ms-auto d-lg-none" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-links gap-3">
                                 <li class="nav-item d-flex align-items-center home">
                                     <i class="fa-solid fa-house me-1"></i>
@@ -77,7 +81,7 @@
                             </ul>
                         </div>
                         <!-- search + cart -->
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center search-icon">
                             <div class="search-box me-3 position-relative">
                                 <input
                                     class="form-control"
@@ -87,6 +91,7 @@
                                     id="searchBox"
                                 >
                                 <i class="fa fa-search position-absolute d-flex align-items-center justify-content-center"></i>
+                                <span class="close-search ">&times;</span>
                             </div>
                             <div class="icon-shopping position-relative">
                                 <a href="Cart.html">

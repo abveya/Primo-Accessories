@@ -103,7 +103,7 @@ function addToCartLocal(product) {
   }
 
 
-  // === UPDATE BUTTON STATE (toggle Add/Remove based on cart) ===
+
 function renderButtonsState() {
   document.querySelectorAll(BUTTON_SELECTOR).forEach(btn => {
     btn.classList.remove("in-cart"); // إزالة أي تأثير سابق
@@ -217,3 +217,7 @@ document.querySelectorAll(".product").forEach(product => {
     });
   }
 });
+
+
+
+

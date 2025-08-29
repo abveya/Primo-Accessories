@@ -1,21 +1,619 @@
-/* Small  768px  to 991px
-@media (min-width: 768px) {
-  .container-fluid {
-    width: 750px;
-    margin: 0 auto;
+/* home responsive */
+@media (max-width: 1265px) and (min-width:1055px) {
+  .logo img {
+    width: 99px;
+    height: 61px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 19px !important;
+  }
+
+  .nav-links ul {
+    font-size: 14px;
+  }
+
+  .search-box input {
+    padding: 3px 35px 3px 12px !important;
+    width: 132px;
+  }
+
+  .search-box i {
+    right: 24px;
+    font-size: 8px;
+    width: 30.5px;
+    height: 86%;
+  }
+
+  .search-box {
+    margin-right: 0px !important;
+    width: 155px;
+  }
+
+  .container .wrapper .box .images {
+    width: 277px;
+    height: 254px;
+  }
+
+  .container .wrapper .box {
+    max-width: 292px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+
+    font-size: 10px;
+    padding: 9px 10px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 37px;
+    width: 165px;
+    font-size: 14px;
+  }
+
+  .container .wrapper .box .key-cover-info p {
+    font-size: 15px;
+  }
+
+  .container .wrapper .box .key-cover-info .key-cover-title {
+    font-size: 13px;
   }
 }
 
-@media (min-width: 992px) {  
-  .container-fluid {
-    width: 970px;
-    margin: 0 auto;
+@media (max-width: 1055px) and (min-width:992px) {
+  .logo img {
+    width: 94px;
+    height: 57px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 17px !important;
+  }
+
+  .nav-links ul {
+    font-size: 13px;
+  }
+
+  .search-box input {
+    padding: 1px 35px 1px 12px !important;
+    width: 129px;
+    font-size: 11px;
+  }
+
+  .search-box i {
+    right: 28px;
+    font-size: 8px;
+    width: 30.5px;
+    height: 84%;
+  }
+
+  .search-box {
+    margin-right: 0px !important;
+    width: 155px;
+  }
+
+  .nav-links .dropdown-menu .dropdown-item {
+    font-size: 0.7rem !important;
+  }
+
+  .nav-links .dropdown-menu {
+    min-width: 110px;
+  }
+
+  .container .wrapper .box .images {
+    width: 260px;
+    height: 226px;
+  }
+
+  .container .wrapper .box {
+    max-width: 275px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 10px;
+    padding: 9px 9px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 35px;
+    width: 159px;
+    font-size: 14px;
+  }
+
+  .container .wrapper .box .key-cover-info p {
+    font-size: 14px;
+  }
+
+  .container .wrapper .box .key-cover-info .key-cover-title {
+    font-size: 13px;
   }
 }
 
-@media (min-width: 1200px) { 
-  .container-fluid {
-    width: 1170px;
-    margin: 0 auto;
+@media (max-width:992px) {
+  .search-icon {
+    order: 3;
   }
-} */
+
+  .logo {
+    order: 2;
+    margin-left: 6%;
+  }
+
+
+  .logo img {
+    width: 102px;
+    height: 63px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 19px !important;
+  }
+
+
+  .search-box input {
+    width: 138px;
+  }
+
+  .search-box {
+    width: 140px;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 224px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    transition: left 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+  }
+
+  .exit-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #000;
+    font-size: 19px;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #000;
+    font-weight: 600;
+  }
+
+  .navbar-collapse .dropdown-menu {
+    position: static;
+    background-color: #f4f4f4;
+    box-shadow: none;
+    margin: 0;
+    padding: 0px;
+  }
+
+  .navbar-collapse .dropdown-item {
+    color: #000;
+  }
+
+  .background-image .background .background-text h2 {
+    font-size: 42px !important;
+  }
+
+  .background-image .background .background-text h2 span {
+    font-size: 47px !important;
+  }
+
+  .background-image .background .background-text button a {
+    font-size: 12px;
+  }
+
+
+  .background-image .background .background-text button {
+
+    padding: 8px;
+  }
+
+
+  .container .wrapper .box .images {
+    width: 208px;
+    height: 189px;
+  }
+
+  .container .wrapper .box {
+    max-width: 275px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 10px;
+    padding: 9px 9px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 32px;
+    width: 119px;
+    font-size: 11px;
+  }
+
+  .container .wrapper .box .key-cover-price {
+
+    gap: 14px;
+  }
+
+  .container .wrapper .box .key-cover-info p {
+    font-size: 14px;
+  }
+
+  .container .wrapper .box .key-cover-info .key-cover-title {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .container .wrapper .box .images {
+    width: 236px;
+    height: 213px;
+  }
+
+  /* .container .wrapper .box {
+        max-width: 275px;
+    } */
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 34px;
+    width: 138px;
+    font-size: 12px;
+  }
+
+  .container .wrapper .box .key-cover-price {
+
+    gap: 16px;
+  }
+
+  .container .wrapper .box .key-cover-info p {
+    font-size: 16px;
+  }
+
+  .container .wrapper .box .key-cover-info .key-cover-title {
+    font-size: 13px;
+  }
+}
+
+@media (max-width:730px) and (min-width:320px) {
+
+  header .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .logo {
+    flex-direction: column;
+    margin-left: 6%;
+  }
+
+  .logo img {
+    width: 86px;
+    height: 50px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 13px !important;
+  }
+
+  .navbar {
+    padding: 0px;
+  }
+
+  header {
+    min-height: 83px;
+  }
+
+  .navbar-toggler {
+    font-size: 13px;
+  }
+
+  .background-image .background .background-text h2 {
+    font-size: 40px;
+  }
+
+  .background-image .background .background-text h2 span {
+    font-size: 40px;
+  }
+
+  .background-image .background .background-text button a {
+
+    font-size: 11px;
+  }
+
+  .background-image .background .background-text button {
+
+    padding: 6px;
+  }
+
+  #cart-count {
+    font-size: 9px;
+    padding: 4px 6px 3px;
+  }
+
+  .icon-shopping i {
+    font-size: 19px;
+  }
+
+
+  .search-box {
+    width: auto;
+  }
+
+  .search-box input {
+    display: none;
+    position: fixed;
+    top: 21%;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    z-index: 2000;
+    padding: 0 40px 0 12px;
+    background: #fff;
+
+  }
+
+  .search-box.active input {
+    display: block;
+  }
+
+  .search-box i {
+    cursor: pointer;
+    z-index: 1060;
+    position: relative !important;
+    box-shadow: 0px 0px;
+    height: 27px;
+    top: 13px;
+    /* left: 82px; */
+    font-size: 16px;
+    width: 28.5px;
+    color: black;
+    background: #f4f4f4;
+  }
+
+  .close-search {
+    display: none !important;
+    position: fixed;
+    top: 22%;
+    right: 12px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 2100;
+  }
+
+  .search-box.active .close-search {
+    display: block !important;
+  }
+
+  .background-image .background {
+    height: 405px;
+  }
+}
+
+@media (max-width:531px) {
+
+  .container .wrapper .box {
+    max-width: 217px;
+  }
+
+
+  .container .wrapper .box .images {
+    width: 204px;
+    height: 191px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 9px;
+    padding: 9px 9px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 32px;
+    width: 111px;
+    font-size: 11px;
+  }
+
+  .container .wrapper .box .key-cover-price {
+
+    gap: 16px;
+  }
+
+  .container .wrapper .box .key-cover-info p {
+    font-size: 13.5px;
+  }
+
+  .container .wrapper .box .key-cover-info .key-cover-title {
+    font-size: 11px;
+  }
+
+}
+
+@media (max-width:473px) {
+
+  .container .wrapper .box {
+    max-width: 192px;
+  }
+
+  .container .wrapper .box .images {
+    width: 178px;
+    height: 161px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 29px;
+    width: 92px;
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width:420px) {
+  .background-image .background .background-text h2 {
+    font-size: 29px !important;
+  }
+
+  .background-image .background .background-text h2 span {
+    font-size: 30px !important;
+  }
+
+  .background-image .background .background-text button {
+    padding: 4px;
+    padding-top: 0px;
+  }
+
+  .background-image .background .background-text button a {
+    font-size: 9px;
+  }
+
+  .container .wrapper .box {
+    max-width: 165px;
+  }
+
+  .container .wrapper .box .images {
+    width: 151px;
+    height: 148px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    height: 29px;
+    width: 71px;
+    font-size: 10px;
+  }
+
+  .container .wrapper .box .key-cover-price {
+    gap: 13px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 9px;
+    padding: 8px 5px;
+  }
+}
+
+@media (max-width:380px) {
+
+  .logo img {
+    width: 80px;
+    height: 47px;
+  }
+
+  header .container-fluid .logo-nav .logo h4 {
+    font-size: 11px !important;
+  }
+
+  .navbar-toggler {
+    font-size: 11px;
+  }
+
+  header .container-fluid {
+    padding-left: 0px !important;
+  }
+
+  .navbar-nav {
+    font-size: 13px;
+  }
+
+  .navbar-collapse {
+
+    width: 197px;
+  }
+
+  .nav-links .dropdown-menu .dropdown-item {
+    font-size: 0.7rem !important;
+  }
+
+  .container .wrapper .box .images {
+    width: 142px;
+    height: 138px;
+  }
+
+  .container .wrapper .box {
+    max-width: 153px;
+    padding: 5px;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    width: 70px;
+    font-size: 8px;
+    height: 26px;
+  }
+
+  .container .wrapper .box .key-cover-price {
+    gap: 9px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 8px;
+    padding: 6px 6px;
+  }
+
+  .container .wrapper .box .key-cover-info p {
+    font-size: 11.5px;
+    margin-bottom: 4px;
+  }
+
+  .container .wrapper .box .key-cover-info .key-cover-title {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+
+  .container .wrapper .box .images .arrow {
+    font-size: 11px;
+    padding: 2px 6px 0px;
+  }
+}
+
+@media (max-width:343px) {
+
+  .container .wrapper .box .images {
+    width: 136px;
+    height: 129px;
+    margin: auto;
+  }
+
+  .container .wrapper .box {
+    max-width: 147px;
+    padding: 5px;
+  }
+
+}
+
+@media (max-width:330px) {
+  .container .wrapper .box .images {
+    width: 130px;
+    height: 129px;
+    margin: auto;
+  }
+
+  .container .wrapper .box .key-cover-price button {
+    width: 65px;
+    font-size: 7px;
+    height: 21px;
+  }
+
+  .container .wrapper .box .key-cover-price p {
+    font-size: 7px;
+  }
+}

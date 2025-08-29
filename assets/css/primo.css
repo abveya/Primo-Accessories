@@ -20,8 +20,16 @@ body {
     flex: 1;
 }
 
+.navbar {
+    z-index: 1000;
+}
+
 .search-results {
     padding-bottom: 15%;
+}
+
+.navbar-toggler.aos-animate {
+    transform: none !important;
 }
 
 .container-fluid.aos-animate {
@@ -697,4 +705,9 @@ footer .bottom-footer .links a {
     font-size: 15px;
 }
 
-/* end of the footer  */
+.close-search {
+    display: none !important;
+}
+
+
+/* end of the footer*/
