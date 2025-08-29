@@ -511,6 +511,34 @@
     font-size: 9px;
     padding: 8px 5px;
   }
+
+  .before-footer .text-for-clients h3 {
+    font-size: 18px;
+  }
+
+  .before-footer .text-for-clients .Question h4 {
+    font-size: 14px;
+  }
+
+  .before-footer .text-for-clients .last-text h4 {
+    font-size: 14px;
+  }
+
+  .before-footer {
+    padding-bottom: 44%;
+  }
+
+  .before-footer .icons {
+    gap: 0.7rem !important;
+  }
+
+  .before-footer .icons a {
+    font-size: 20px;
+  }
+
+  .before-footer .text-for-clients .last-text .emoji {
+    font-size: 21px;
+  }
 }
 
 @media (max-width:380px) {
