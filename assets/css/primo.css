@@ -594,8 +594,9 @@ footer .wave#wave4 {
 
 footer .top-footer {
     background-color: black;
-    display: grid;
-    grid-template-columns: 35% 17% 17%;
+    display: grid
+;
+    grid-template-columns: 35% 55%;
     gap: 8.2%;
     padding: 23px 135px 20px;
     color: white;
@@ -603,11 +604,11 @@ footer .top-footer {
     justify-content: space-evenly;
 }
 
-footer .top-footer .primo-info .logo {
+footer .top-footer .primo-info .logo-footer {
     margin-bottom: 6px;
 }
 
-footer .top-footer .primo-info .logo h4 {
+footer .top-footer .primo-info .logo-footer h4 {
     font-size: 21px;
     font-weight: 600;
     color: white;
@@ -705,9 +706,13 @@ footer .bottom-footer .links a {
     font-size: 15px;
 }
 
+footer .totalll {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .close-search {
     display: none !important;
 }
-
 
 /* end of the footer*/

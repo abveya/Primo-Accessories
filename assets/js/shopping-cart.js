@@ -57,18 +57,18 @@
       item.dataset.id = product.id;
 
       item.innerHTML = `
-        <div class="col-4 d-flex align-items-center">
+        <div class="col-4 d-flex align-items-center img-container">
           <img src="${product.image}" alt="${product.name}" class="cart-item-image me-2">
           <span class="cart-item-name ms-2">${product.name}</span>
         </div>
         <div class="col-2 cart-item-color">${product.color || '-'}</div>
         <div class="col-2 cart-item-price">LE ${product.price.toFixed(2)}</div>
-        <div class="col-2 d-flex align-items-center">
+        <div class="col-2 d-flex align-items-center quantity">
           <button class="minus-btn border-0 bg-transparent">-</button>
           <input type="text" class="cart-item-qty text-center border-0 bg-transparent" value="${product.quantity}" min="1" readonly>
           <button class="plus-btn border-0 bg-transparent">+</button>
         </div>
-        <div class="col-2 d-flex align-items-end">
+        <div class="col-2 d-flex align-items-end total-remove">
           <span class="cart-item-total">LE ${(product.price * product.quantity).toFixed(2)}</span>
           <button class="btn btn-sm border-0 mt-1 remove-item text-dark p-0 ms-4"><i class="fa-solid fa-xmark"></i></button>
         </div>
