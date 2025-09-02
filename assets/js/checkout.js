@@ -34,22 +34,6 @@ function updateCities() {
   }
 }
 
-// function updateRegions() {
-//   const city = document.getElementById("city").value;
-//   const regionSelect = document.getElementById("region");
-
-//   regionSelect.innerHTML = '<option value="">Select your region</option>';
-
-//   if (city && regionOptions[city]) {
-//     regionOptions[city].forEach(region => {
-//       const option = document.createElement("option");
-//       option.value = region;
-//       option.textContent = region;
-//       regionSelect.appendChild(option);
-//     });
-//   }
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
   const STORAGE_KEY = "cart_fallback";
 
@@ -84,3 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("shipping-fee").textContent = `LE ${shippingFee}`;
   document.getElementById("total-cost").textContent = `LE ${totalPrice + shippingFee}`;
 });
+
+
+// Exit Menu
+const exitMenu = document.querySelector('.exit-menu');
+const navbarCollapse = document.getElementById('mainNavbar');
+
+if (exitMenu) {
+    exitMenu.addEventListener('click', () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+            bsCollapse.hide();
+        }
+    });
+}

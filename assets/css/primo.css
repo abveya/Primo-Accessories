@@ -65,12 +65,6 @@ header .container-fluid .logo-nav .logo h4 {
     letter-spacing: 0.5px;
 }
 
-/* header .contain .logo-nav .nav-links .home
-{
-    gap: 8px;  
-    align-self: center;
-} */
-
 header .container-fluid .nav-links .home i {
     font-size: 16px;
     line-height: 1;
