@@ -545,14 +545,14 @@ footer .wave {
 }
 
 footer .wave#wave1 {
-    z-index: 1000;
+    z-index: 999;
     opacity: 1;
     bottom: 0;
     animation: animateWave 4s linear infinite;
 }
 
 footer .wave#wave2 {
-    z-index: 999;
+    z-index: 998.5;
     opacity: 0.5;
     bottom: 10px;
     animation: animateWave_2 4s linear infinite;
