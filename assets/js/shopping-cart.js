@@ -4,7 +4,9 @@
 
   let cart = [];
 
-  function safeParse(json) { try { return JSON.parse(json); } catch (e) { return []; } }
+  function safeParse(json) { 
+    try { return JSON.parse(json); } catch (e) { return []; } 
+  }
   function loadCartFromStorage() { return safeParse(localStorage.getItem(STORAGE_KEY)); }
   function saveCartToStorage(c) { localStorage.setItem(STORAGE_KEY, JSON.stringify(c)); }
 
@@ -27,14 +29,18 @@
   }
 
   function addToCartLocal(product) {
-    const idx = cart.findIndex(i => i.id === product.id);
+    const uniqueId = `${product.id}_${product.color}`;
+    const idx = cart.findIndex(i => `${i.id}_${i.color}` === uniqueId);
+
     if (idx > -1) cart[idx].quantity += product.quantity;
     else cart.push({ ...product });
+
     saveCartToStorage(cart);
   }
 
-  function removeFromCartLocal(productId) {
-    cart = cart.filter(i => i.id !== productId);
+  function removeFromCartLocal(product) {
+    const uniqueId = `${product.id}_${product.color}`;
+    cart = cart.filter(i => `${i.id}_${i.color}` !== uniqueId);
     saveCartToStorage(cart);
   }
 
@@ -76,13 +82,11 @@
 
       cartContent.appendChild(item);
 
-      // استدعاء عناصر + و - و input و total
       const qtyInput = item.querySelector(".cart-item-qty");
       const minusBtn = item.querySelector(".minus-btn");
       const plusBtn = item.querySelector(".plus-btn");
       const totalSpan = item.querySelector(".cart-item-total");
 
-      // --- تعديل الكمية بالنقص ---
       minusBtn.addEventListener("click", () => {
         if (product.quantity > 1) {
           product.quantity--;
@@ -93,7 +97,6 @@
         }
       });
 
-      // --- تعديل الكمية بالزيادة ---
       plusBtn.addEventListener("click", () => {
         product.quantity++;
         qtyInput.value = product.quantity;
@@ -102,10 +105,9 @@
         updateCartCountDisplay();
       });
 
-      // --- زر Remove ---
       const removeBtn = item.querySelector(".remove-item");
       removeBtn.addEventListener("click", () => {
-        removeFromCartLocal(product.id);
+        removeFromCartLocal(product);
         renderCartItems();
       });
     });
@@ -121,8 +123,8 @@
     const product = readProductDataFromButton(btn);
     if (!product) return;
 
-    const exists = cart.some(i => i.id === product.id);
-    if (exists) removeFromCartLocal(product.id);
+    const exists = cart.some(i => i.id === product.id && i.color === product.color);
+    if (exists) removeFromCartLocal(product);
     else addToCartLocal(product);
 
     renderCartItems();
