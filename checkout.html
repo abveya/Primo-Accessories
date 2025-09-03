@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="checkout-content col-lg-6 col-md-6 col-sm-6">
-                        <form action="">
+                        <form id="checkout-form" action="" method="get">
                             <!-- Contact Info -->
                             <div class="contact-info row mb-3">
                                 <h3 class="col-10 mb-4">Contact information</h3>
@@ -171,8 +171,6 @@
                                     >
                                         <option value="">Select your country</option>
                                         <option value="Egypt">Egypt</option>
-                                        <option value="USA">USA</option>
-                                        <option value="UK">UK</option>
                                     </select>
                                 </div>
                                 <div class="col-6 mb-4">
@@ -228,6 +226,12 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- hidden inputs for backend -->
+<input type="hidden" name="price" id="hidden-price">
+<input type="hidden" name="shipping_fee" id="hidden-shipping-fee">
+<input type="hidden" name="total_cost" id="hidden-total-cost">
+
                             <div class="button">
                                 <button type="submit">Place Order</button>
                             </div>
