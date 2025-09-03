@@ -1,4 +1,4 @@
-// assets/js/cart.js
+// // assets/js/cart.js
 (function () {
   // === CONFIGURATION ===
   const BUTTON_SELECTOR = ".add-to-cart, .key-cover-price button, .buy-info button";
@@ -217,7 +217,3 @@ document.querySelectorAll(".product").forEach(product => {
     });
   }
 });
-
-
-
-
