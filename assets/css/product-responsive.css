@@ -30,8 +30,7 @@
         margin-bottom: 15%;
     }
 
-    .contact-div
-    {
+    .contact-div {
         justify-content: flex-start !important;
         padding-left: 12%;
     }
@@ -104,15 +103,14 @@
         padding-left: 20%;
     }
 
-    .contact-div
-    {
+    .contact-div {
         justify-content: center !important;
-                padding-left: 5%;
+        padding-left: 5%;
     }
 
     .contact-us h2 {
-    font-size: 16px;
-}
+        font-size: 16px;
+    }
 
 }
 
@@ -142,8 +140,7 @@
         margin-left: 9%;
     }
 
-    .contact-div
-    {
+    .contact-div {
         padding-left: 0 !important;
     }
 }
@@ -183,7 +180,8 @@
     }
 
     .popup-content {
-    width: 383px;}
+        width: 383px;
+    }
 
 }
 
@@ -245,8 +243,8 @@
         font-size: 11px;
     }
 
-    
-        .Products {
+
+    .Products {
         margin-bottom: 48%;
     }
 }
@@ -258,7 +256,7 @@
         height: 340px;
     }
 
-        .Product-info h1 {
+    .Product-info h1 {
         font-size: 25px;
     }
 }
@@ -297,7 +295,9 @@
         align-items: flex-start;
     }
 
-           .quantity .increment, .quantity .decrement, .quantity input {
+    .quantity .increment,
+    .quantity .decrement,
+    .quantity input {
         height: 30px;
         width: 35px;
     }
@@ -352,26 +352,27 @@
         height: 290px;
     }
 
-    .Product-info
-    {
+    .Product-info {
         padding: 0px;
     }
 
-    .Product-info h1{
-                font-size: 25px;
+    .Product-info h1 {
+        font-size: 25px;
     }
 
-        .quantity .increment, .quantity .decrement, .quantity input {
+    .quantity .increment,
+    .quantity .decrement,
+    .quantity input {
         height: 29px;
         width: 30px;
     }
-        .popup-content {
+
+    .popup-content {
         width: 276px;
         height: 239px;
     }
 
-    .close
-    {
+    .close {
         font-size: 25px;
     }
 }
@@ -418,11 +419,13 @@
         height: 277px;
     }
 
-        .arrow {
+    .arrow {
         font-size: 17px;
     }
 
-        .quantity .increment, .quantity .decrement, .quantity input {
+    .quantity .increment,
+    .quantity .decrement,
+    .quantity input {
         height: 26px;
         width: 26px;
     }

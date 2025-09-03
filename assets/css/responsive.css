@@ -303,10 +303,9 @@
     padding: 7px 0px
   }
 
-  /* 
-  footer .top-footer .primo-info h4 {
-    font-size: 15px;
-  } */
+  header .container-fluid .nav-links .home i {
+    display: none;
+  }
 
   footer .top-footer .primo-info ul li a {
     width: 39px;
@@ -564,8 +563,7 @@
     margin-right: 42px;
   }
 
-  .search-results
-  {
+  .search-results {
     margin-bottom: 12%;
   }
 
@@ -847,9 +845,8 @@
     padding: 7px 0px 6px 0px;
   }
 
-  .search-results
-  {
-        margin-bottom: 25%;
+  .search-results {
+    margin-bottom: 25%;
   }
 
 }
@@ -1167,8 +1164,7 @@
     margin-bottom: 48%;
   }
 
-  .search-results
-  {
+  .search-results {
     margin-bottom: 40%;
   }
 }
