@@ -371,7 +371,7 @@
 
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 
   .container .wrapper .box .images {
     width: 236px;
@@ -562,6 +562,11 @@
     margin-top: 42px !important;
     margin-left: 40px;
     margin-right: 42px;
+  }
+
+  .search-results
+  {
+    margin-bottom: 12%;
   }
 
 }
@@ -840,6 +845,11 @@
 
   .content2 p {
     padding: 7px 0px 6px 0px;
+  }
+
+  .search-results
+  {
+        margin-bottom: 25%;
   }
 
 }
@@ -1155,6 +1165,11 @@
 
   .contact {
     margin-bottom: 48%;
+  }
+
+  .search-results
+  {
+    margin-bottom: 40%;
   }
 }
 
