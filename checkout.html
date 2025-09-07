@@ -120,7 +120,12 @@
                         </div>
                     </div>
                     <div class="checkout-content col-lg-6 col-md-6 col-sm-6">
-                        <form id="checkout-form" action="" method="get" novalidate>
+                        <form
+                            id="checkout-form"
+                            action=""
+                            method="get"
+                            novalidate
+                        >
                             <!-- Contact Info -->
                             <div class="contact-info row mb-3">
                                 <h3 class="col-10 mb-4">Contact information</h3>
@@ -237,6 +242,7 @@
                             <input type="hidden" name="price" id="hidden-price">
                             <input type="hidden" name="shipping_fee" id="hidden-shipping-fee">
                             <input type="hidden" name="total_cost" id="hidden-total-cost">
+                            <input type="hidden" name="product_ids[]" id="hidden-product-ids">
                             <div class="button">
                                 <button type="submit">Place Order</button>
                             </div>
