@@ -368,6 +368,10 @@
     margin-bottom: 12%;
   }
 
+  .error {
+    font-size: 0.6em;
+  }
+
 }
 
 @media (max-width:767px) {
@@ -744,6 +748,10 @@
 
   footer .top-footer .primo-info h4 {
     text-align: center;
+  }
+
+  .error {
+    font-size: 0.5em;
   }
 
 }

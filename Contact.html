@@ -128,10 +128,9 @@
                             </div>
                         </div>
                         <div class="content2 col-lg-4 col-md-6 col-sm-10 col-10 p-4 mt-2 rounded-5">
-                            <form method="post" class="p-2 ps-3">
+                            <form id="contact-form" method="get" class="p-2 ps-3" novalidate>
                                 <h4>Get in Touch</h4>
                                 <p>Have a question about car accessories? Send us your details and we’ll get back to you soon!</p>
-                                <!-- <div class="full-name"> -->
                                 <input
                                     class="w-100 bg-transparent form-control border-0 border-bottom border-bottom-custom"
                                     type="text"
@@ -140,8 +139,7 @@
                                     placeholder="Full-name"
                                     required
                                 >
-                                <!-- <input type="text" id="lname" name="lname" placeholder="Last-name" required> -->
-                                <!-- </div> -->
+                                <div class="c-error" id="nameError"></div>
                                 <input
                                     class="w-100 bg-transparent form-control border-0 border-bottom border-bottom-custom"
                                     type="email"
@@ -150,6 +148,7 @@
                                     placeholder="Email"
                                     required
                                 >
+                                <div class="c-error" id="emailError"></div>
                                 <input
                                     class="w-100 bg-transparent form-control border-0 border-bottom border-bottom-custom"
                                     type="text"
@@ -158,6 +157,7 @@
                                     placeholder="Subject"
                                     required
                                 >
+                                <div class="c-error" id="subjectError"></div>
                                 <br>
                                 <textarea
                                     class="w-100 bg-transparent form-control border-0 border-bottom border-bottom-custom"
@@ -166,13 +166,13 @@
                                     placeholder="Message"
                                     rows="3"
                                 ></textarea>
-                                <button class="btn"> Send a message</button>
+                                <div class="c-error" id="messageError"></div>
+                                <button type="submit" class="btn"> Send a message</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <img class="logo" src="assets/images/WhatsApp Image 2025-08-15 at 20.47.04_b239df20p.png" alt=""> -->
         </section>
         <!-- start of the footer  -->
         <footer class="d-flex flex-column">
@@ -244,6 +244,7 @@
             </div>
         </footer>
         <!-- end of the footer  -->
+        <script src="assets/js/contact-validation.js"></script>
         <script src="assets/js/cart.js"></script>
         <script src="assets/js/checkout.js"></script>
         <script src="assets/js/search-results.js"></script>

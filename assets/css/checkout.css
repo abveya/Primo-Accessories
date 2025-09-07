@@ -87,3 +87,10 @@
 .checkout-summary .total p {
     color: #989898;
 }
+
+.error {
+    color: #dc3545;
+    font-size: 0.8em;
+    margin-top: 6px;
+    margin-left: 7px;
+}

@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="checkout-content col-lg-6 col-md-6 col-sm-6">
-                        <form id="checkout-form" action="" method="get">
+                        <form id="checkout-form" action="" method="get" novalidate>
                             <!-- Contact Info -->
                             <div class="contact-info row mb-3">
                                 <h3 class="col-10 mb-4">Contact information</h3>
@@ -134,6 +134,7 @@
                                         id="full-name"
                                         required
                                     >
+                                    <div class="error" id="nameError"></div>
                                 </div>
                                 <div class="col-6 mb-4">
                                     <label for="Email" class="mb-3 ms-2">Email</label>
@@ -144,6 +145,7 @@
                                         name="email"
                                         id="Email"
                                     >
+                                    <div class="error" id="emailError"></div>
                                 </div>
                                 <div class="col-6 mb-4">
                                     <label for="phone-number" class="mb-3 ms-2">Phone number *</label>
@@ -155,6 +157,7 @@
                                         id="phone-number"
                                         required
                                     >
+                                    <div class="error" id="phoneError"></div>
                                 </div>
                             </div>
                             <!-- Shipping Address -->
@@ -172,6 +175,7 @@
                                         <option value="">Select your country</option>
                                         <option value="Egypt">Egypt</option>
                                     </select>
+                                    <div class="error" id="countryError"></div>
                                 </div>
                                 <div class="col-6 mb-4">
                                     <label for="city" class="mb-3 ms-2">City *</label>
@@ -184,6 +188,7 @@
                                     >
                                         <option value="">Select your city</option>
                                     </select>
+                                    <div class="error" id="cityError"></div>
                                 </div>
                                 <div class="col-6 mb-4">
                                     <label for="region" class="mb-3 ms-2">region *</label>
@@ -195,6 +200,7 @@
                                         id="region"
                                         required
                                     >
+                                    <div class="error" id="regionError"></div>
                                 </div>
                                 <div class="col-6 mb-4">
                                     <label for="street-address" class="mb-3 ms-2">Street address *</label>
@@ -206,6 +212,7 @@
                                         id="street-address"
                                         required
                                     >
+                                    <div class="error" id="streetError"></div>
                                 </div>
                             </div>
                             <!-- Shipping Method -->
@@ -226,12 +233,10 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- hidden inputs for backend -->
-<input type="hidden" name="price" id="hidden-price">
-<input type="hidden" name="shipping_fee" id="hidden-shipping-fee">
-<input type="hidden" name="total_cost" id="hidden-total-cost">
-
+                            <input type="hidden" name="price" id="hidden-price">
+                            <input type="hidden" name="shipping_fee" id="hidden-shipping-fee">
+                            <input type="hidden" name="total_cost" id="hidden-total-cost">
                             <div class="button">
                                 <button type="submit">Place Order</button>
                             </div>
@@ -327,6 +332,7 @@
             </div>
         </footer>
         <!-- end of the footer  -->
+        <script src="assets/js/checkout-validation.js"></script>
         <script src="assets/js/cart.js"></script>
         <script src="assets/js/checkout.js"></script>
         <script src="assets/js/search-results.js"></script>
