@@ -49,15 +49,15 @@ const shippingFees = {
   "Marsa Matrouh": 125
 };
 
-
 function updateCities() {
-  const country = document.getElementById("country").value;
+  const country = document.getElementById("country");
   const citySelect = document.getElementById("city");
+  if (!country || !citySelect) return;
 
   citySelect.innerHTML = '<option value="">Select your city</option>';
 
-  if (country && cityOptions[country]) {
-    cityOptions[country].forEach(city => {
+  if (country.value && cityOptions[country.value]) {
+    cityOptions[country.value].forEach(city => {
       const option = document.createElement("option");
       option.value = city;
       option.textContent = city;
@@ -65,7 +65,9 @@ function updateCities() {
     });
   }
 
-  updateSummary();
+  if (typeof window.updateSummary === "function") {
+    window.updateSummary();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -86,57 +88,64 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
 
   function updateSummary() {
-    let selectedCity = document.getElementById("city").value;
+    const cityEl = document.getElementById("city");
+    const priceEl = document.getElementById("price");
+    const shippingEl = document.getElementById("shipping-fee");
+    const totalEl = document.getElementById("total-cost");
+    const formEl = document.getElementById("checkout-form");
+
+    if (!cityEl || !priceEl || !shippingEl || !totalEl || !formEl) return;
+
+    let selectedCity = cityEl.value;
     let shippingFee = shippingFees[selectedCity] || 0;
 
-    document.getElementById("price").textContent = `LE ${totalPrice}`;
-    document.getElementById("shipping-fee").textContent = `LE ${shippingFee}`;
-    document.getElementById("total-cost").textContent = `LE ${totalPrice + shippingFee}`;
+    priceEl.textContent = `LE ${totalPrice}`;
+    shippingEl.textContent = `LE ${shippingFee}`;
+    totalEl.textContent = `LE ${totalPrice + shippingFee}`;
 
     document.getElementById("hidden-price").value = totalPrice;
     document.getElementById("hidden-shipping-fee").value = shippingFee;
     document.getElementById("hidden-total-cost").value = totalPrice + shippingFee;
 
-
     document.querySelectorAll('input[name="product_ids[]"]').forEach(el => el.remove());
-
 
     cart.forEach(item => {
       const input = document.createElement("input");
       input.type = "hidden";
       input.name = "product_ids[]"; // Array
       input.value = item.id;
-      document.getElementById("checkout-form").appendChild(input);
+      formEl.appendChild(input);
     });
-
-
-
   }
 
-  document.getElementById("city").addEventListener("change", updateSummary);
+  // expose updateSummary to global so updateCities can call it
+  window.updateSummary = updateSummary;
+
+  const cityEl = document.getElementById("city");
+  if (cityEl) {
+    cityEl.addEventListener("change", updateSummary);
+  }
 
   updateSummary();
 
-
   const checkoutForm = document.getElementById("checkout-form");
-  checkoutForm.addEventListener("submit", function () {
+  if (checkoutForm) {
+    checkoutForm.addEventListener("submit", function () {
+      localStorage.removeItem(STORAGE_KEY);
 
-    localStorage.removeItem(STORAGE_KEY);
+      document.getElementById("price").textContent = "LE 0";
+      document.getElementById("shipping-fee").textContent = "LE 0";
+      document.getElementById("total-cost").textContent = "LE 0";
 
-    document.getElementById("price").textContent = "LE 0";
-    document.getElementById("shipping-fee").textContent = "LE 0";
-    document.getElementById("total-cost").textContent = "LE 0";
+      document.getElementById("hidden-price").value = 0;
+      document.getElementById("hidden-shipping-fee").value = 0;
+      document.getElementById("hidden-total-cost").value = 0;
 
-    document.getElementById("hidden-price").value = 0;
-    document.getElementById("hidden-shipping-fee").value = 0;
-    document.getElementById("hidden-total-cost").value = 0;
-
-    const idsInput = document.getElementById("hidden-product-ids");
-    if (idsInput) idsInput.value = "";
-  });
+      const idsInput = document.getElementById("hidden-product-ids");
+      if (idsInput) idsInput.value = "";
+    });
+  }
 });
-
-
 
 // Exit Menu
 const exitMenu = document.querySelector('.exit-menu');
@@ -150,7 +159,6 @@ if (exitMenu) {
     }
   });
 }
-
 
 // document.addEventListener("DOMContentLoaded", async function () {
 //   const API_BASE = "http://localhost:3000/api"; // غيّريها حسب السيرفر

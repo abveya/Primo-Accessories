@@ -131,7 +131,9 @@
   }
 
   function init() {
-    cart = loadCartFromStorage();
+    cart = loadCartFromStorage() || [];
+    if (!Array.isArray(cart)) cart = [];
+
     renderCartItems();
     document.addEventListener("click", handleToggle);
     console.log("Cart initialized. Items:", cart.length);

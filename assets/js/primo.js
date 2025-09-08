@@ -5,7 +5,8 @@ AOS.init({
     once: true
 });
 
-// Exit Menu
+
+// ================== Exit Menu ==================
 const exitMenu = document.querySelector('.exit-menu');
 const navbarCollapse = document.getElementById('mainNavbar');
 
@@ -18,37 +19,28 @@ if (exitMenu) {
     });
 }
 
-// Search Box (Toggle)
-document.addEventListener("DOMContentLoaded", () => {
-    const searchIcon = document.querySelector(".search-box i");
-    const searchBox = document.querySelector(".search-box");
-
-    if (searchIcon && searchBox) {
-        searchIcon.addEventListener("click", () => {
-            searchBox.classList.toggle("active");
-            if (searchBox.classList.contains("active")) {
-                searchBox.querySelector("input").focus();
-            }
-        });
-    }
-});
-
-// Search Box (Open / Close)
+// ================== Search Box ==================
 document.addEventListener("DOMContentLoaded", () => {
     const searchBox = document.querySelector(".search-box");
+    if (!searchBox) return;
+
     const searchInput = searchBox.querySelector("input");
     const searchIcon = searchBox.querySelector("i");
     const closeBtn = searchBox.querySelector(".close-search");
 
-    // open search
-    searchIcon.addEventListener("click", () => {
-        searchBox.classList.add("active");
-        searchInput.focus();
-    });
+    if (searchIcon) {
+        searchIcon.addEventListener("click", () => {
+            searchBox.classList.toggle("active");
+            if (searchBox.classList.contains("active")) {
+                searchInput.focus();
+            }
+        });
+    }
 
-    // close search
-    closeBtn.addEventListener("click", () => {
-        searchBox.classList.remove("active");
-        searchInput.value = "";
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            searchBox.classList.remove("active");
+            searchInput.value = "";
+        });
+    }
 });
