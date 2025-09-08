@@ -147,19 +147,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-// Exit Menu
-const exitMenu = document.querySelector('.exit-menu');
-const navbarCollapse = document.getElementById('mainNavbar');
-
-if (exitMenu) {
-  exitMenu.addEventListener('click', () => {
-    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-    if (bsCollapse) {
-      bsCollapse.hide();
-    }
-  });
-}
-
 // document.addEventListener("DOMContentLoaded", async function () {
 //   const API_BASE = "http://localhost:3000/api"; // غيّريها حسب السيرفر
 
